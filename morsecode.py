@@ -303,7 +303,10 @@ def encoding_sentence(english_sentence):
 
     cleaned_english_sentence = get_cleaned_english_sentence(english_sentence)
     for item in cleaned_english_sentence:
-        result += encoding_character(item)
+        if item != ' ':
+            result += encoding_character(item)
+        else:
+            result += ' '
         result += ' '
         
     result.strip()
