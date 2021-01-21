@@ -87,9 +87,8 @@ def is_validated_english_sentence(user_input):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
     result = True
 
-    str_list = user_input.split()
     count = 0
-    for item in str_list:
+    for item in user_input:
         if item in '.,!?':
             count += 1
 
