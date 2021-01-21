@@ -321,15 +321,17 @@ def main():
     user_input = ''
     while True:
         user_input = input('Input your message(H - Help, 0 - Exit):')
+        if user_input == '0':
+            break
         if user_input.lower() == 'h' or user_input.lower() == 'help':
             print(get_help_message())
             continue
         if not user_input[0].isalpha() and is_validated_morse_code(user_input):
             print(decoding_sentence(user_input))
-            break
+            continue
         if user_input[0].isalpha() and is_validated_english_sentence(user_input):
             print(encoding_sentence(user_input))
-            break
+            continue
 
         print("Wrong Input")
 
