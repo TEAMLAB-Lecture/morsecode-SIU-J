@@ -88,9 +88,9 @@ def is_validated_english_sentence(user_input):
     result = True
 
     count = 0
-    if len(user_input) == 0:
+    if len(user_input.strip()) == 0:
         return False
-        
+
     for item in user_input:
         if item in '.,!?':
             count += 1
