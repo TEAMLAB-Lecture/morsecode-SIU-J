@@ -131,16 +131,13 @@ def is_validated_morse_code(user_input):
     result = True
     morse_code_dict = get_morse_code_dict()
     morse_code_list = user_input.split()
-    print(morse_code_list)
 
     for item in user_input:
         if item != '-' and item != '.' and item != ' ':
-            print(1)
             return False
 
     for item in morse_code_list:
         if not item in morse_code_dict.values():
-            print(2)
             return False
 
     return result
