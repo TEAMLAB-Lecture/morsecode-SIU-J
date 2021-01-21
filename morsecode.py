@@ -92,7 +92,7 @@ def is_validated_english_sentence(user_input):
         if item in '.,!?':
             count += 1
 
-        if item.isdigit() or item in '_@#$%^&*()-+=[]{}"\';:\|`~' or count == len(str_list):
+        if item.isdigit() or item in '_@#$%^&*()-+=[]{}"\';:\|`~' or count == len(user_input):
             result = False
             break
 
